@@ -38,11 +38,5 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter{
 		ctx.close();
 	}
 
-	/**
-	 * 
-	 */
-	public EchoServerHandler() {
-		// TODO Auto-generated constructor stub
-	}
 
 }

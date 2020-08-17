@@ -3,7 +3,7 @@
  */
 package com.cl.elena.nettyServer.echo;
 
-import static java.lang.System.*;
+import static java.lang.System.err;
 
 import java.net.InetSocketAddress;
 
@@ -56,7 +56,7 @@ public class EchoServer {
 			return;
 		}
 		int port = Integer.parseInt(args[0]);
-		new EchoServer(port).StartServer(args);;
+		new EchoServer(port).StartServer(args);
 	}
 	
 }
