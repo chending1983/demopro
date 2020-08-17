@@ -1,9 +1,0 @@
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/server/EchoServer.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/server/EchoServerHandler.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/NettyServerApplication.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/chat/SecureChatServerInitializer.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/chat/ChatServer.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/chat/TextWebSocketFrameHandler.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/chat/HttpRequestHandler.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/chat/ChatServerInitializer.java
-/Users/charlie/IdeaProjects/nettyServer/src/main/java/com/cl/elena/provide/chat/SecureChatServer.java
