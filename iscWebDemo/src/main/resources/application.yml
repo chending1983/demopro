@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active:
+    - @profileActive@
+    
+    
+    
+#Metrics related configurations
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          "*"
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    
