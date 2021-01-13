@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import cn.isc.iscWebDemo.model.resposity.User;
 
 /**
- * @author charlie
+ * @author isc
  * @date 2021/01/12
  */
 public interface UserDao {
