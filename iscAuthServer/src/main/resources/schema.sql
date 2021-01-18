@@ -1,4 +1,4 @@
--- used in tests that use HSQL
+-- used in tests that use mysql
 create table oauth_client_details (
   client_id VARCHAR(256) PRIMARY KEY,
   resource_ids VARCHAR(256),
@@ -7,11 +7,11 @@ create table oauth_client_details (
   authorized_grant_types VARCHAR(256),
   web_server_redirect_uri VARCHAR(256),
   authorities VARCHAR(256),
-  access_token_validity INTEGER,
-  refresh_token_validity INTEGER,
+  access_token_validity int,
+  refresh_token_validity int,
   additional_information VARCHAR(4096),
-  autoapprove VARCHAR(256)
-);
+  autoapprove VARCHAR(256),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8m64;
 
 create table oauth_client_token (
   token_id VARCHAR(256),
@@ -19,7 +19,7 @@ create table oauth_client_token (
   authentication_id VARCHAR(256) PRIMARY KEY,
   user_name VARCHAR(256),
   client_id VARCHAR(256)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8m64;
 
 create table oauth_access_token (
   token_id VARCHAR(256),
@@ -29,17 +29,17 @@ create table oauth_access_token (
   client_id VARCHAR(256),
   authentication LONGBLOB,
   refresh_token VARCHAR(256)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8m64;
 
 create table oauth_refresh_token (
   token_id VARCHAR(256),
   token longblob,
   authentication longblob
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8m64;
 
 create table oauth_code (
   code VARCHAR(256), authentication LONGBLOB
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8m64;
 
 create table oauth_approvals (
 	userId VARCHAR(256),
@@ -48,20 +48,6 @@ create table oauth_approvals (
 	status VARCHAR(10),
 	expiresAt TIMESTAMP,
 	lastModifiedAt TIMESTAMP
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8m64;
 
-
--- customized oauth_client_details table
-create table ClientDetails (
-  appId VARCHAR(256) PRIMARY KEY,
-  resourceIds VARCHAR(256),
-  appSecret VARCHAR(256),
-  scope VARCHAR(256),
-  grantTypes VARCHAR(256),
-  redirectUrl VARCHAR(256),
-  authorities VARCHAR(256),
-  access_token_validity int,
-  refresh_token_validity int,
-  additionalInformation VARCHAR(4096),
-  autoApproveScopes VARCHAR(256)
-);
+insert into tfapi.oauth_client_details values (1, 'test','secret','basic','authorization_code,refresh_token,implicit,password, client_credentials',null,null,36000,36000,'{\"systemInfo\":\"authServer Demo\"}','true');
