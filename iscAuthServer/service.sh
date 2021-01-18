@@ -1,6 +1,6 @@
 #!/bin/bash 
 #这里可替换为你自己的执行程序,其他代码无需更改 
-APP_NAME=tfapi.jar
+APP_NAME=iscAuthServer.jar
 JVM="-server -Xms1024m -Xmx1024m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/Users/charlie/OOM.dump -XX:+PrintGCDetails"
 APPFILE_PATH="-Dspring.profiles.active=dev"
 #使用说明,用来提示输入参数 
@@ -24,8 +24,9 @@ is_exist
 if [ $? -eq "0" ]; then 
 echo "${APP_NAME} is already running. pid=${pid} ." 
 else 
-nohup java $JVM -jar $APPFILE_PATH $APP_NAME > /dev/null 2>&1 
+nohup java $JVM -jar $APPFILE_PATH $APP_NAME > /dev/null 2>&1 &
 fi
+status
 } 
 #停止方法 
 stop(){ 
